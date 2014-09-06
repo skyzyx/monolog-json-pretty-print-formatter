@@ -13,5 +13,9 @@
         "psr-0": {
             "Skyzyx\\Monolog\\Formatter\\": "src/"
         }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "monolog/monolog": "*"
     }
 }
