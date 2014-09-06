@@ -30,6 +30,8 @@ use Monolog\Formatter\LineFormatter;
  */
 class JsonPrettyPrintFormatter extends LineFormatter
 {
+    const SIMPLE_FORMAT = "[%datetime%] %channel%.%level_name%: %message%\n%context%\n%extra%\n\n";
+
     protected function convertToString($data)
     {
         $data = parent::convertToString($data);
