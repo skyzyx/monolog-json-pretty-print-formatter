@@ -1,0 +1,17 @@
+{
+    "name": "skyzyx/monolog-json-pretty-print-formatter",
+    "description": "Pretty-prints JSON responses in the Monolog LineFormatter.",
+    "keywords": ["monolog", "json", "log", "pretty"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Parman",
+            "homepage": "http://ryanparman.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Skyzyx\\Monolog\\Formatter\\": "src/"
+        }
+    }
+}
