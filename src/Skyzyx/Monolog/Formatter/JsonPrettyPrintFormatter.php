@@ -23,23 +23,18 @@
 
 namespace Skyzyx\Monolog\Formatter;
 
-use Monolog\Formatter\LineFormatter;
+use Monolog\Formatter\JsonFormatter;
 
 /**
- * A variation of the Monolog LineFormatter which pretty-prints the JSON output.
+ * A variation of the Monolog JsonFormatter which pretty-prints the JSON output.
  */
-class JsonPrettyPrintFormatter extends LineFormatter
+class JsonPrettyPrintFormatter extends JsonFormatter
 {
-    const SIMPLE_FORMAT = "[%datetime%] %channel%.%level_name%: %message%\n%context%\n%extra%\n\n";
-
-    protected function convertToString($data)
+    /**
+     * {@inheritdoc}
+     */
+    public function format(array $record)
     {
-        $data = parent::convertToString($data);
-        return json_encode(json_decode($data), JSON_PRETTY_PRINT);
-    }
-
-    protected function replaceNewlines($str)
-    {
-        return $str;
+        return json_encode($record, JSON_PRETTY_PRINT) . PHP_EOL;
     }
 }
