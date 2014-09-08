@@ -1,6 +1,6 @@
 {
     "name": "skyzyx/monolog-json-pretty-print-formatter",
-    "description": "Pretty-prints JSON responses in the Monolog LineFormatter!",
+    "description": "Pretty-prints JSON responses in the Monolog JsonFormatter!",
     "keywords": ["monolog", "json", "log", "pretty"],
     "license": "MIT",
     "authors": [
