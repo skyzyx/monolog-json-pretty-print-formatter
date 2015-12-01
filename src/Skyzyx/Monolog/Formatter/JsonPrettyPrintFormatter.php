@@ -35,6 +35,6 @@ class JsonPrettyPrintFormatter extends JsonFormatter
      */
     public function format(array $record)
     {
-        return json_encode($record, JSON_PRETTY_PRINT) . PHP_EOL;
+        return json_encode($record, JSON_PRETTY_PRINT) . ($this->appendNewline ? "\n" : '');
     }
 }
